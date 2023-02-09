@@ -2,7 +2,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -18,7 +18,7 @@ a {
 
 /* HEADER */
 .header {
-    background-color: #2d2d30ef;
+    background-color: #fafafa;
     position: fixed;
     top:0;
     left:0;
@@ -41,11 +41,11 @@ a {
 
 
 .nav-item:hover a {
-    color:#d3d0d0;
+    color:#979494;
 }
 
 .nav-link {
-    color:#979696;
+    color:#161616;
     padding:10px;
     display:inline-block;
     position: relative;
@@ -55,7 +55,7 @@ a {
     content: "";
     width:0px;
     height: 2px;
-    background-color: #fff;
+    background-color: #161616;
     display: inline-block;
     position: absolute;
     bottom: 25px;
@@ -63,13 +63,12 @@ a {
 }
 
 .nav-item:hover .nav-link::before {
-    width: 50px;
+    width: 40px;
 }
 
 .search-icon {
     width:50px;
     font-size: 1.5rem;
-    color:white;
     position: absolute;
     margin: 30px 0 0 15px;
     cursor: pointer;
@@ -84,10 +83,38 @@ a {
 }
 
 .slider-img {
+    width: 1920px;
+    height: 900px;
+    object-fit: cover;
+}
+
+.img-overlay {
+    position: absolute;
     width: 100%;
+    height: 900px;
+    background-image: linear-gradient(to right,
+      rgba(48, 30, 103, .3),
+      rgba(48, 31, 102, .3),
+      rgba(48, 47, 47, 0.3),
+      rgba(59, 57, 57, 0.3));
+      z-index: 10;
+}
+
+.img-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     animation: Slide 10s ease infinite;
 }
 
+.text-container {
+    margin-bottom: 4rem;
+    color:white;
+    position: absolute;
+    text-align: center;
+    z-index: 1000;
+    font-weight: 500;
+}
 
 @keyframes Slide {
     0% {transform: translateX(0%);}

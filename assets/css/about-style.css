@@ -1,0 +1,133 @@
+body {
+    background-color: black;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&display=swap');
+
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* RESET CSS */
+
+/* HEADER */
+.header {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 9999;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.block-navigation {
+    display: flex;
+    line-height: 65px;
+    font-size: 1em;
+}
+
+
+.nav-item:hover a {
+    color:#fff000;
+}
+
+.nav-link {
+    color:#ffffff;
+    padding:10px;
+    display:inline-block;
+    position: relative;
+    font-family: "Barlow Condensed";
+    font-size: 1.5rem;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+
+.nav-link::before {
+    content: "";
+    width:0px;
+    height: 2px;
+    background-color: #fcfcfc;
+    display: inline-block;
+    position: absolute;
+    bottom: 25px;
+    transition: .4s ease;
+}
+
+.nav-item:hover .nav-link::before {
+    width: 40px;
+}
+
+.search-icon {
+    width:50px;
+    font-size: 1.5rem;
+    position: absolute;
+    margin: 30px 0 0 15px;
+    cursor: pointer;
+}
+/* CONTENT */
+.content-wrapper {
+    width: 1408px;
+    margin: 75px auto 0;
+    height: 900px;
+    background-color: #fff;
+}
+
+/* CONTENT */
+
+/* ANIMATE */
+@keyframes note-move {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translate(0, 0) rotate(3deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+
+.animate-note-one {
+    background: url(/imgs/ico_onpu_1.png), no-repeat;
+    background-size: cover;
+    height: 614px;
+    width: 341px;
+    position: absolute;
+    top: 222px;
+    right: 90px;
+    left: auto;
+    animation: note-move 3s 0s ease infinite;
+}
+
+.animate-note-two {
+    background: url(/imgs//ico_onpu_2.png), no-repeat;
+    background-size: cover;
+    height: 337px;
+    width: 219px;
+    position: absolute;
+    top: auto;
+    left: 131px;
+    bottom: 78px;
+    animation: note-move 3s 0s ease infinite;
+}

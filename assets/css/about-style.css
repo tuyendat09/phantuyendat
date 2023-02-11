@@ -9,8 +9,9 @@ body {
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
+    font-family: "Barlow Condensed",sans-serif;
+
 }
 
 ul {
@@ -87,14 +88,135 @@ a {
 /* CONTENT */
 .content-wrapper {
     width: 1408px;
-    margin: 75px auto 0;
+    margin: 100px 0 0;
     height: 900px;
-    background-color: #fff;
 }
 
-/* CONTENT */
+.member-name {
+    font-weight: 700;
+    margin: 0 16px;
+    padding: 0 64px;
+    background-color:red;
+}
 
+.member-name-child-fill {
+        color:#fff000;
+        font-size: 2rem;
+}
+
+.member-name-child {
+    -webkit-text-stroke: #fff000 1px;
+    font-size: 2rem;
+}
+
+.member-switch {
+    display:flex;
+    gap: 20px;
+}
+
+.member-switch-links {
+    font-family: "Barlow Condensed",sans-serif;
+    color:white;
+}
+
+.active {
+    position: relative;
+}
+.active::before {
+    content:"";
+    width: 76px;
+    height: 2px;
+    background-color: #fff000;
+    bottom: -4px;
+    position: absolute
+}
+
+.catchcopy-img {
+    width: 400px;
+    position: absolute;
+    margin-left: 4%;
+    margin-top: 15%;
+}
+
+.hitori-behind {
+    height: 510px;
+}
+
+.hitori-behind-img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.note-fly::before {
+    background-color: #ff2291;
+    content:"";
+    background: url(/imgs/ico_onpu_1_nrw.png) no-repeat 0 0/100%;
+    position: absolute;
+    top: -20px;
+    left: -57px;
+    height: 60px;
+    width: 40px;
+}
+/* PAGINATION */
+.pagination-block {
+    background-color: #ff2291;
+    display:flex;
+    justify-content: space-around;
+    height: 75px;
+    position: relative;
+}
+
+.pagination-block::before {
+    background: url(/imgs/name.svg  ) repeat-x;
+    background-size: 150px;
+    content:"";
+    width: 100%;
+    position: absolute;
+    top:-19px;
+    height: 55px;
+    animation: chara_txtmove 15s 0s linear infinite;
+}
+
+.pagination-link {
+    color:black;
+    margin-left: 50px;
+    font-size: 1.5rem;
+}
+
+.next-member {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hitori {
+    display:flex;
+    align-items: center;
+}
+.arrow-rotate-left {
+    transform: rotate(180deg);
+}
+
+.arrow-rotate-right {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+/* PAGINATION */
+
+/* CONTENT */
 /* ANIMATE */
+@keyframes chara_txtmove {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -181px 0;
+    }
+  }
+
+
 @keyframes note-move {
     0% {
       transform: translate(0, 0) rotate(0deg);
@@ -131,3 +253,4 @@ a {
     bottom: 78px;
     animation: note-move 3s 0s ease infinite;
 }
+

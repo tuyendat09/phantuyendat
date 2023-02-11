@@ -78,27 +78,29 @@ a {
     width: 40px;
 }
 
-.search-icon {
-    width:50px;
-    font-size: 1.5rem;
+.logo-brand {
     position: absolute;
-    margin: 30px 0 0 15px;
-    cursor: pointer;
+    left: 50px;
+    top:30px;
 }
+
+
 /* CONTENT */
 .content-wrapper {
-    width: 1408px;
     margin: 100px 0 0;
     height: 900px;
 }
 
 .member-name {
     font-weight: 700;
-    margin: 0 16px;
+    margin: 0 247px;
     padding: 0 64px;
-    background-color:red;
 }
 
+.hitori-part {
+    width: 1408px;
+    margin: 0 auto;
+}
 .member-name-child-fill {
         color:#fff000;
         font-size: 2rem;
@@ -110,6 +112,7 @@ a {
 }
 
 .member-switch {
+    margin-top:10px;
     display:flex;
     gap: 20px;
 }
@@ -131,11 +134,11 @@ a {
     position: absolute
 }
 
-.catchcopy-img {
+.text-img {
     width: 400px;
     position: absolute;
-    margin-left: 4%;
-    margin-top: 15%;
+    margin-left: 3%;
+    margin-top: 13%;
 }
 
 .hitori-behind {
@@ -148,15 +151,34 @@ a {
     transform: translate(-50%);
 }
 
+.note-floy {
+    position: relative;
+}
+
 .note-fly::before {
     background-color: #ff2291;
     content:"";
-    background: url(/imgs/ico_onpu_1_nrw.png) no-repeat 0 0/100%;
+    background: url(/imgs/ico_onpu_1_nrw.png) no-repeat;
+    animation: noteFly 3s 0s ease infinite;
+    background-size: contain;
     position: absolute;
-    top: -20px;
-    left: -57px;
+    top: 93px;
+    left: 262px;
     height: 60px;
-    width: 40px;
+    width: 63px;
+}
+
+.note-fly::after {
+    background-color: #ff2291;
+    content:"";
+    background: url(/imgs/ico_onpu_2\ \(1\).png) no-repeat;
+    animation: noteFly 3s 0s ease infinite;
+    background-size: contain;
+    position: absolute;
+    top: 102px;
+    left: 557px;
+    height: 94px;
+    width: 95px;
 }
 /* PAGINATION */
 .pagination-block {
@@ -175,7 +197,7 @@ a {
     position: absolute;
     top:-19px;
     height: 55px;
-    animation: chara_txtmove 15s 0s linear infinite;
+    animation: textMove 15s 0s linear infinite;
 }
 
 .pagination-link {
@@ -205,9 +227,16 @@ a {
 }
 /* PAGINATION */
 
+/* MAIN IMG */
+.main-img {
+    position: absolute;
+    top:17%;
+    left:50%;
+    transform: translateX(-50%);
+}
 /* CONTENT */
 /* ANIMATE */
-@keyframes chara_txtmove {
+@keyframes textMove {
     0% {
       background-position: 0 0;
     }
@@ -254,3 +283,23 @@ a {
     animation: note-move 3s 0s ease infinite;
 }
 
+@keyframes noteFly {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(0, -20%) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@media (max-width:1320px) {
+    .member-name {
+        font-weight: 700;
+        margin: 0 16px;
+        padding: 0 64px;
+        background-color:red;
+    }
+}

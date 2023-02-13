@@ -1,3 +1,26 @@
+
+@keyframes slider2 {
+  0%   {transform: translateX(0%);}
+  5% {transform: translateX(0%);}
+  10%   {transform: translateX(-100%);}
+  17.5%   {transform: translateX(-100%);}
+  25%  {transform: translateX(-200%);}
+  32.5%  {transform: translateX(-200%);}
+  40%  {transform: translateX(-300%);}
+  47.5%  {transform: translateX(-300%);}
+  55%  {transform: translateX(-400%);}
+  62.5%  {transform: translateX(-400%);}
+  70%  {transform: translateX(-300%);}
+  77.5%  {transform: translateX(-300%);}
+  85% {transform: translateX(-200%);}
+  87.5% {transform: translateX(-200%);}
+  92.5% {transform: translateX(-100%);}
+  95.5% {transform: translateX(-100%);}
+  100% {transform: translateX(0%);}
+}
+
+
+
 @keyframes textMove {
     0% {
       background-position: 0 0;

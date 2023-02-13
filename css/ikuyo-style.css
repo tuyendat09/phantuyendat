@@ -38,7 +38,7 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     display:flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
 }
 
 .block-navigation {
@@ -84,7 +84,9 @@ a {
     top:30px;
 }
 
-
+.active-nav {
+    color:#fff000 !important;
+}
 /* CONTENT */
 .content-wrapper {
     margin: 100px 0 0;
@@ -97,24 +99,34 @@ a {
     padding: 0 64px;
 }
 
-.hitori-part {
+.ikuyo-part {
+    position: relative;
     width: 1408px;
     margin: 0 auto;
 }
+
 .member-name-child-fill {
-        color:#fff000;
-        font-size: 2rem;
+    animation: text-bright 0.9s 0s ease, 
+    text-bright-in 0.4s 0.3s,
+    text-bright 0.3s .4s ease, 
+    text-bright-in 0.3s 0.8s;
+     color:#fff000;
+     font-size: 2rem;
 }
 
 .member-name-child {
     -webkit-text-stroke: #fff000 1px;
     font-size: 2rem;
+    animation: text-bright 0.2s 0.1s ease,
+    text-bright-in 0.2s 0.3s ease,
+    text-bright 0.3s 0.4s ease,
+    text-bright-in 0.3s 0.6s ease;
 }
 
 .member-switch {
-    margin-top:10px;
     display:flex;
     gap: 20px;
+    margin-top:10px;
 }
 
 .member-switch-links {
@@ -122,12 +134,32 @@ a {
     color:white;
 }
 
+.member-switch-links {
+    font-family: "Barlow Condensed",sans-serif;
+    color:white;
+    position: relative;
+}
+
+.member-switch-links::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #fff000;
+    transition: .4s ease;
+    bottom: -4px;
+}
+
+.member-switch-items:hover .member-switch-links::before {
+    width: 30px;
+}
+
 .active {
     position: relative;
 }
 .active::before {
     content:"";
-    width: 76px;
+    width: 60px;
     height: 2px;
     background-color: #fff000;
     bottom: -4px;
@@ -141,14 +173,15 @@ a {
     margin-top: 13%;
 }
 
-.hitori-behind {
+.ikuyo-behind {
     height: 510px;
 }
 
-.hitori-behind-img {
+.ikuyo-behind-img {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    animation: growUpBehind 1s ease;
 }
 
 .note-floy {
@@ -158,7 +191,7 @@ a {
 .note-fly::before {
     background-color: #ff2291;
     content:"";
-    background: url(/imgs/ico_onpu_1_nrw.png) no-repeat;
+    background: url(../imgs/ico_onpu_1_nrw.png) no-repeat;
     animation: noteFly 3s 0s ease infinite;
     background-size: contain;
     position: absolute;
@@ -171,7 +204,7 @@ a {
 .note-fly::after {
     background-color: #ff2291;
     content:"";
-    background: url(/imgs/ico_onpu_2\ \(1\).png) no-repeat;
+    background: url(../imgs/ico_onpu_2\ \(1\).png) no-repeat;
     animation: noteFly 3s 0s ease infinite;
     background-size: contain;
     position: absolute;
@@ -181,21 +214,30 @@ a {
     width: 95px;
 }
 /* PAGINATION */
+.inner-pagination-base {z-index: 1;
+     width: 100%;
+     background-color: #ff4637;
+     position: relative;
+     animation: slideRight 1s 0s ease;
+    }
+
+
 .pagination-block {
-    background-color: #ff2291;
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 1431px;
     height: 75px;
     position: relative;
+    margin: 0 auto;
 }
 
-.pagination-block::before {
-    background: url(/imgs/name.svg  ) repeat-x;
+.inner-pagination-base::before {
+    background: url(../imgs/kita-name.svg  ) repeat-x;
     background-size: 150px;
     content:"";
     width: 100%;
     position: absolute;
-    top:-19px;
+    top: -19px;
     height: 55px;
     animation: textMove 15s 0s linear infinite;
 }
@@ -204,6 +246,7 @@ a {
     color:black;
     margin-left: 50px;
     font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .next-member {
@@ -212,7 +255,7 @@ a {
     align-items: center;
 }
 
-.hitori {
+.ikuyo {
     display:flex;
     align-items: center;
 }
@@ -233,34 +276,88 @@ a {
     top:17%;
     left:50%;
     transform: translateX(-50%);
+    z-index: 1;
+    animation: growUp 1s 0s ease;
 }
+
+/* PROFILE */
+.ikuyo-profile-inner {
+    display:flex;
+    width: 1408px;
+    margin: 0 auto;
+}
+
+.profile-head, .profile-role {
+    display:inline;
+    color:white;
+    margin-bottom: 25px;
+}
+
+.profile-block, .profile-avatar, .profile-des {
+    width: 50%;
+}
+
+.profile-block {
+    padding: 80px 0;
+}
+
+.profile-des {
+    border-top: 1px solid white;
+    padding-top: 20px;
+    color:white;
+    position: relative;
+}
+
+.profile-avatar {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-des::before {
+    content: "";
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    animation: slideRightProfile 2s 0s ease;
+}
+
+/* PROFILE */
+
 /* CONTENT */
+/* FOOTER */
+.footer {
+    color:black;
+    text-align: center;
+    background: url(../imgs/fotter-img.png);
+    margin-top: 157px;
+}
+
+.footer-inner {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-nav {
+    display:flex;
+    padding:20px;
+    gap: 30px;
+}
+
+.footer-nav-links {
+    color:black;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
 /* ANIMATE */
-@keyframes textMove {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: -181px 0;
-    }
-  }
-
-
-@keyframes note-move {
-    0% {
-      transform: translate(0, 0) rotate(0deg);
-    }
-    50% {
-      opacity: 0.5;
-      transform: translate(0, 0) rotate(3deg);
-    }
-    100% {
-      transform: translate(0, 0) rotate(0deg);
-    }
-  }
-
 .animate-note-one {
-    background: url(/imgs/ico_onpu_1.png), no-repeat;
+    background: url(../imgs/ico_onpu_1.png), no-repeat;
     background-size: cover;
     height: 614px;
     width: 341px;
@@ -272,7 +369,7 @@ a {
 }
 
 .animate-note-two {
-    background: url(/imgs//ico_onpu_2.png), no-repeat;
+    background: url(../imgs//ico_onpu_2.png), no-repeat;
     background-size: cover;
     height: 337px;
     width: 219px;
@@ -283,23 +380,32 @@ a {
     animation: note-move 3s 0s ease infinite;
 }
 
-@keyframes noteFly {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  50% {
-    transform: translate(0, -20%) rotate(10deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-}
-
-@media (max-width:1320px) {
+/* MEDIA */
+@media (max-width:1440px) {
     .member-name {
         font-weight: 700;
-        margin: 0 16px;
+        margin: 0 100px;
         padding: 0 64px;
-        background-color:red;
+    }
+
+    .ikuyo-part {
+        width: 1200px;
+    }
+
+    .note-fly::before {
+        left: 110px;
+    }
+
+    .note-fly::after {
+        left: 393px;
+    }
+
+    .ikuyo-profile-inner {
+        width: 1200px;
+
+    }
+
+    .pagination-block {
+        width: 1200px;
     }
 }

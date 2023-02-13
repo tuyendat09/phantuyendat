@@ -1,0 +1,543 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&display=swap');
+
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow Condensed",sans-serif;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* RESET CSS */
+/* LOADER */
+.loader-bg {
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    height: 100%;
+    background: url(../imgs/ph_bg.jpg);
+    animation: loader-scale 5s 0s ease forwards, loader-swide-up 2s 3s ease;
+    filter: grayscale(1);
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.loader-bg:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    content: "";
+    height: 100%;
+    opacity: 0.7;
+    width: 100%;
+  }
+
+.loader-logo {
+    position: fixed;
+    top: 53%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 753px;
+    height: 901px;
+    visibility: hidden;
+    object-fit: contain;
+    animation: ZIndexUp 4s 0s ease,  fadeIn 1s 3s ease;;
+}
+
+.loader-logo-container {
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 505px;
+    z-index: 1002;
+}
+
+
+.loader-names-items-ikuyo {
+    position: fixed;
+    color:#fff;
+    font-size: 2.2rem;
+    top: 26%;
+    right: 59%;
+    transform: rotate(350deg);
+    color:black;
+    background-color: #fff000;
+    font-family: "Barlow Condensed",sans-serif;
+    padding: 4px 12px 5px 4px;
+    animation: ZIndexUp 3s 0s ease ,fadeIn 1s 2s ease;
+    visibility: hidden;
+}
+
+.loader-names-items-ryo {
+    position: fixed;
+    color:#fff;
+    font-size: 2.2rem;
+    font-family: "Barlow Condensed",sans-serif;
+    top: 20%;
+    right: 55%;
+    transform: rotate(350deg);
+    color:black;
+    background-color: #fff000;
+    padding: 4px 12px 5px 4px;
+    animation: ZIndexUp 3s 0s ease ,fadeIn 1s 2s ease;
+    visibility: hidden;
+
+}
+
+.loader-names-items-nijika  {
+    position: fixed;
+    color:#fff;
+    font-size: 2.2rem;
+    bottom: 28%;
+    left: 59%;
+    transform: rotate(350deg);
+    color:black;
+    background-color: #fff000;
+    padding: 4px 12px 5px 4px;
+    animation: ZIndexUp 3s 0s ease, fadeIn 1s 2s ease;
+    visibility: hidden;
+}
+
+.loader-names-items-hitori {
+    position: fixed;
+    color:#fff;
+    font-size: 2.2rem;
+    bottom: 21%;
+    left: 54%;
+    transform: rotate(350deg);
+    color:black;
+    background-color: #fff000;
+    padding: 4px 12px 5px 4px;
+    animation: ZIndexUp 3s 0s ease, fadeIn 1s 2s ease;
+    visibility: hidden;
+
+}
+
+/* LOADER */
+
+/* HEADER */
+.active {
+    color: #fff000 !important;
+}
+
+.header {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 99;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.logo-brand {
+    position: absolute;
+    top: 15%;
+    left: 33px;
+}
+
+.block-navigation {
+    display: flex;
+    line-height: 65px;
+    font-size: 1em;
+}
+
+
+.nav-item:hover a {
+    color:#fff000;
+}
+
+.nav-link {
+    color: #fff;
+    padding:10px;
+    display:inline-block;
+    position: relative;
+    font-family: "Barlow Condensed";
+    font-size: 1.5rem;
+    font-weight: 500;
+    scroll-behavior: smooth;
+    text-shadow: 0 1px 1px #fff000;
+}
+
+.nav-link::before {
+    content: "";
+    width:0px;
+    height: 2px;
+    background-color: #fff000;
+    display: inline-block;
+    position: absolute;
+    bottom: 25px;
+    transition: .4s ease;
+}
+
+.nav-item:hover .nav-link::before {
+    width: 40px;
+}
+
+.search-icon {
+    color: white;
+    width:50px;
+    font-size: 1.5rem;
+    position: absolute;
+    margin: 30px 0 0 15px;
+    cursor: pointer;
+}
+/* END HEADER */
+
+/* SlIDER */
+.slider {
+    /* margin-top: 85px; */
+    display:flex;
+    overflow: hidden;
+}
+
+.slider-img {
+    width: 1920px;
+    height: 970px;
+    object-fit: cover;
+}
+
+.img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 970px;
+    background-image: linear-gradient(to right,
+      rgba(48, 30, 103, .3),
+      rgba(48, 31, 102, .3),
+      rgba(48, 47, 47, 0.3),
+      rgba(59, 57, 57, 0.3));
+    z-index: 10;
+}
+
+.img-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    animation: Slide 10s ease infinite;
+}
+
+.text-container {
+    margin-bottom: 2rem;
+    color:white;
+    position: absolute;
+    text-align: center;
+    z-index: 1000;
+    font-weight: 500;
+}
+
+@keyframes Slide {
+    0% {transform: translateX(0%);}
+    25% {transform: translateX(-100%);}
+    30% {transform: translateX(-100%);}
+    50% {transform: translateX(-200%);}
+    55% {transform: translateX(-200%);}
+    75% {transform: translateX(-100%);}
+    80% {transform: translate(-100%);}
+
+
+}
+
+/* END SLIDER */
+
+/* CONTENT */
+
+/* OUR TEAM */
+.animate-note {
+    background: url(../imgs/ph_onpu_1_nrw.png), no-repeat, 0/100%;
+    background-size: cover;
+    width: 498px;
+    height: 373px;
+    position: absolute;
+    left: 68%;
+    top: 115%;
+    animation: note-move 5s 0s ease infinite;
+}
+.our-team {
+    padding: 10px;
+    background-color: #000000;
+}
+
+.our-team-inner {
+    text-align: justify;
+    width: 1200px;
+    margin: 16px auto auto;
+    padding: 36px 0;
+}
+
+.band-name {
+    color: #fff000;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Barlow Condensed";
+    text-align: center;
+    margin-bottom:10px;
+}
+
+.band-slogan {
+    font-size: 1.5rem;
+    color:white;
+    text-align: center;
+    margin-bottom:10px;
+}
+
+.band-member-img {
+    height: 200px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.our-team__img-container {
+    display:flex;
+    margin-top:10px;
+    width: 1200px;
+}
+
+.our-team__img-container-child {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+
+.band-mem-name {
+ font-family: "Barlow Condensed";
+ font-weight: 500;
+ font-size: 1.5rem;
+ color:white;
+}
+
+.read-more {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.read-more::before {
+    content:"";
+    position: absolute;
+    width: 1200px;
+    height: 4px;
+    background-color: rgb(255 255 255 / 20%);
+    bottom: -13px;
+}
+
+.btn {
+    color:rgb(0, 0, 0);
+    text-align: center;
+    width: 500px;
+    height: 80px;
+    background-color: rgb(236, 227, 227);
+    border-radius: 5px;
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+.btn-link {
+    color:black;
+    font-family: "Barlow Condensed";
+    font-size: 2rem;
+    line-height: 70px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-image: linear-gradient(to right, rgba(236, 227, 227, 0.692) ,rgba(182, 171, 171, 0.61));
+}
+
+/* SHOP SECTION */
+.shop {
+    height: 1000px;
+    background: #000000;
+    /* border-top: 60px solid #cec7c7; */
+}
+
+.note-fly {
+    text-align: center;
+    padding:20px 0;
+    color:#fff000;
+    font-size: 3rem;
+    position: relative;
+}
+
+.note-fly::before {
+    content: "";
+    position: absolute;
+    background: url(../imgs/ico_onpu_1_nrw.png);
+    background-repeat: no-repeat;
+    background-size: 41px;
+    top: 45%;
+    left: 40%;
+    width: 150px;
+    height: 150px;
+    animation: noteFly 5s ease infinite;
+}
+.product-list {
+    margin: 0 auto;
+    width: 1300px;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+}
+.product-container {
+    width: 300px;
+    cursor: pointer;
+    background-color: #161616;
+}
+
+.product-container:hover .product-img{
+    transform: scale(1.02);
+}
+.product-head {
+    height: 68px;
+    padding: 10px 18px;
+    background-color: #fff000;
+    font-family: "Barlow Condensed";
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.product-img {
+    position: relative;
+    transition: .5s ease;
+}
+
+
+.product-img::after {
+    content: "";
+    position: absolute;
+    background: url(../imgs/ico_plus.svg);
+    width: 20px;
+    height: 20px;
+    right: 0;
+    top: 15px;
+}
+
+.see-all {
+    position: absolute;
+    right: 36px;
+    bottom: -40px;
+    color:rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+.fa-plus {
+    transition: .2s ease;
+}
+
+.see-all:hover .fa-plus{
+    transform: rotate(180deg);
+}
+
+/* CONTACT */
+.contact {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.contact-inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.contact-block {
+    font-size: 2rem;
+    display:flex;
+    justify-content: space-evenly;
+    margin-top: 16px;
+}
+
+.contact-block-right-child input{
+    font-size: 2rem;
+}
+
+.comment {
+    margin-top:1rem;
+    width: 600px;
+    height: 150px;
+    font-size: 2rem;
+    padding: 6px;
+}
+
+.contact-block input  {
+    padding: 6px;
+}
+
+.contact-block-right-flex {
+    display:flex;
+    flex-direction: column;
+}
+
+.contact-block-btn {
+    text-align: center;
+    margin-top: 16px;
+    align-self: flex-end;
+    width: 100px;
+    height: 50px;
+    background-color: #3333;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.contact-block-btn:hover {
+    background-color: #fff;
+    border: 1px solid #3333;
+}
+
+/* FOOTER */
+.footer {
+    color:black;
+    text-align: center;
+    background: url(../imgs/fotter-img.png);
+    margin-top: 0px;
+}
+
+.footer-inner {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 31px;
+}
+
+.footer-nav {
+    display:flex;
+    padding:20px;
+    gap: 30px;
+}
+
+.footer-nav-links {
+    color:black;
+    font-size: 1.5rem;
+    font-weight: 600;
+}

@@ -1,0 +1,412 @@
+body {
+    background-color: black;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&display=swap');
+
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Barlow Condensed",sans-serif;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* RESET CSS */
+
+/* HEADER */
+.header {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 9999;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.block-navigation {
+    display: flex;
+    line-height: 65px;
+    font-size: 1em;
+}
+
+
+.nav-item:hover a {
+    color:#fff000;
+}
+
+.nav-link {
+    color:#ffffff;
+    padding:10px;
+    display:inline-block;
+    position: relative;
+    font-family: "Barlow Condensed";
+    font-size: 1.5rem;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+
+.nav-link::before {
+    content: "";
+    width:0px;
+    height: 2px;
+    background-color: #fcfcfc;
+    display: inline-block;
+    position: absolute;
+    bottom: 25px;
+    transition: .4s ease;
+}
+
+.nav-item:hover .nav-link::before {
+    width: 40px;
+}
+
+.logo-brand {
+    position: absolute;
+    left: 50px;
+    top:30px;
+}
+
+.active-nav {
+    color:#fff000 !important;
+}
+/* CONTENT */
+.content-wrapper {
+    margin: 100px 0 0;
+    height: 900px;
+}
+
+.member-name {
+    font-weight: 700;
+    margin: 0 247px;
+    padding: 0 64px;
+}
+
+.ryo-part {
+    position: relative;
+    width: 1408px;
+    margin: 0 auto;
+}
+
+.member-name-child-fill {
+    animation: text-bright 0.9s 0s ease, 
+    text-bright-in 0.4s 0.3s,
+    text-bright 0.3s .4s ease, 
+    text-bright-in 0.3s 0.8s;
+     color:#fff000;
+     font-size: 2rem;
+}
+
+.member-name-child {
+    -webkit-text-stroke: #fff000 1px;
+    font-size: 2rem;
+    animation: text-bright 0.2s 0.1s ease,
+    text-bright-in 0.2s 0.3s ease,
+    text-bright 0.3s 0.4s ease,
+    text-bright-in 0.3s 0.6s ease;
+}
+
+.member-switch {
+    margin-top:10px;
+    display:flex;
+    gap: 20px;
+}
+
+.member-switch-links {
+    font-family: "Barlow Condensed",sans-serif;
+    color:white;
+}
+
+.member-switch-links {
+    font-family: "Barlow Condensed",sans-serif;
+    color:white;
+    position: relative;
+}
+
+.member-switch-links::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #fff000;
+    transition: .4s ease;
+    bottom: -4px;
+}
+
+.member-switch-items:hover .member-switch-links::before {
+    width: 30px;
+}
+
+.active {
+    position: relative;
+}
+.active::before {
+    content:"";
+    width: 40px;
+    height: 2px;
+    background-color: #fff000;
+    bottom: -4px;
+    position: absolute
+}
+
+.text-img {
+    width: 400px;
+    position: absolute;
+    margin-left: 3%;
+    margin-top: 13%;
+}
+
+.ryo-behind {
+    height: 510px;
+}
+
+.ryo-behind-img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    animation: growUpBehind 1s ease;
+}
+
+.note-floy {
+    position: relative;
+}
+
+.note-fly::before {
+    background-color: #ff2291;
+    content:"";
+    background: url(../imgs/ico_onpu_1_nrw.png) no-repeat;
+    animation: noteFly 3s 0s ease infinite;
+    background-size: contain;
+    position: absolute;
+    top: 93px;
+    left: 262px;
+    height: 60px;
+    width: 63px;
+}
+
+.note-fly::after {
+    background-color: #ff2291;
+    content:"";
+    background: url(../imgs/ico_onpu_2\ \(1\).png) no-repeat;
+    animation: noteFly 3s 0s ease infinite;
+    background-size: contain;
+    position: absolute;
+    top: 102px;
+    left: 557px;
+    height: 94px;
+    width: 95px;
+}
+/* PAGINATION */
+.inner-pagination-base {
+     z-index: 1;
+     width: 100%;
+     background-color:
+     #02d1e0;position: relative;
+     animation: slideRight 1s 0s ease;
+    }
+
+
+.pagination-block {
+    display:flex;
+    justify-content: space-between;
+    width: 1431px;
+    height: 75px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.inner-pagination-base::before {
+    background: url(../imgs/ryo-name.svg) repeat-x;
+    background-size: 150px;
+    content:"";
+    width: 100%;
+    position: absolute;
+    top: -19px;
+    height: 55px;
+    animation: textMove 15s 0s linear infinite;
+}
+
+.pagination-link {
+    color:black;
+    margin-left: 50px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.next-member {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ryo {
+    display:flex;
+    align-items: center;
+}
+.arrow-rotate-left {
+    transform: rotate(180deg);
+}
+
+.arrow-rotate-right {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+/* PAGINATION */
+
+/* MAIN IMG */
+.main-img {
+    position: absolute;
+    top:17%;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    animation: growUp 1s 0s ease;
+}
+
+/* PROFILE */
+.ryo-profile-inner {
+    display:flex;
+    width: 1408px;
+    margin: 0 auto;
+}
+
+.profile-head, .profile-role {
+    display:inline;
+    color:white;
+    margin-bottom: 25px;
+}
+
+.profile-block, .profile-avatar, .profile-des {
+    width: 50%;
+}
+
+.profile-block {
+    padding: 80px 0;
+}
+
+.profile-des {
+    border-top: 1px solid white;
+    padding-top: 20px;
+    color:white;
+    position: relative;
+}
+
+.profile-avatar {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-des::before {
+    content: "";
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    animation: slideRightProfile 2s 0s ease;
+}
+
+/* PROFILE */
+
+/* CONTENT */
+/* FOOTER */
+.footer {
+    color:black;
+    text-align: center;
+    background: url(../imgs/fotter-img.png);
+    margin-top: 157px;
+}
+
+.footer-inner {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-nav {
+    display:flex;
+    padding:20px;
+    gap: 30px;
+}
+
+.footer-nav-links {
+    color:black;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+/* ANIMATE */
+.animate-note-one {
+    background: url(../imgs/ico_onpu_1.png), no-repeat;
+    background-size: cover;
+    height: 614px;
+    width: 341px;
+    position: absolute;
+    top: 222px;
+    right: 90px;
+    left: auto;
+    animation: note-move 3s 0s ease infinite;
+}
+
+.animate-note-two {
+    background: url(../imgs//ico_onpu_2.png), no-repeat;
+    background-size: cover;
+    height: 337px;
+    width: 219px;
+    position: absolute;
+    top: auto;
+    left: 131px;
+    bottom: 78px;
+    animation: note-move 3s 0s ease infinite;
+}
+
+/* MEDIA */
+@media (max-width:1440px) {
+    .member-name {
+        font-weight: 700;
+        margin: 0 100px;
+        padding: 0 64px;
+    }
+
+    .ryo-part {
+        width: 1200px;
+    }
+
+    .note-fly::before {
+        left: 110px;
+    }
+
+    .note-fly::after {
+        left: 393px;
+    }
+
+    .ryo-profile-inner {
+        width: 1200px;
+
+    }
+
+    .pagination-block {
+        width: 1200px;
+    }
+}

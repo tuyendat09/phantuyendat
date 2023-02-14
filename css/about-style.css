@@ -2,9 +2,6 @@ body {
     background-color: black;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&display=swap');
-
-
 * {
     margin:0;
     padding: 0;
@@ -61,6 +58,7 @@ a {
     font-size: 1.5rem;
     font-weight: 500;
     scroll-behavior: smooth;
+    text-shadow: 0 2px 3px #000000;
 }
 
 .nav-link::before {

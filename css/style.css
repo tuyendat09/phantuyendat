@@ -176,7 +176,7 @@ a {
     font-size: 1.5rem;
     font-weight: 500;
     scroll-behavior: smooth;
-    text-shadow: 0 1px 1px #fff000;
+    text-shadow: 0 2px 3px #000000;
     user-select: none;
 }
 

@@ -210,6 +210,7 @@ a {
     background: url(../imgs/slider-text-behind.png) no-repeat 100%/cover #000000;
     background-attachment: fixed;
     position: relative;
+    /* width: 100vw; */
 }
 
 .slider-img-container {
@@ -274,16 +275,17 @@ a {
 .animate-note {
     background: url(../imgs/ph_onpu_1_nrw.png), no-repeat, 0/100%;
     background-size: cover;
-    width: 498px;
+    width: 390px;
     height: 373px;
     position: absolute;
-    left: 68%;
-    top: 115%;
+    left: 67%;
+    top: 46%;
     animation: note-move 5s 0s ease infinite;
 }
 .our-team {
     padding: 10px;
     background-color: #000000;
+    position: relative;
 }
 
 .our-team-inner {
@@ -550,5 +552,12 @@ a {
 }
 
 @media (max-width:1440px) {
-    
+    .slider-band-name-1 {
+        font-size: 7rem;
+        left: 4vh;
+    }
+    .slider-band-name-2 {
+        font-size: 7rem;
+        left: 25vh;
+    }
 }

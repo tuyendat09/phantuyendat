@@ -247,21 +247,21 @@ a {
 
 .slider-band-name-1 {
     position: absolute;
-    font-size: 10rem;
+    font-size: 8.4vw;
     color:#fff000;
     font-weight: 700;
-    left: -0.3vh;
+    left: 0vh;
     top: -4vh;
     user-select: none;
 }
 
 .slider-band-name-2 {
     position: absolute;
-    font-size: 10rem;
+    font-size: 8.4vw;
     color:#fff000;
     font-weight: 700;
-    left: 23.2vh;
-    top: 11vh;
+    top: 13vh;
+    left: 11.25vw;
     user-select: none;
 }
 
@@ -549,15 +549,4 @@ a {
     color:black;
     font-size: 1.5rem;
     font-weight: 600;
-}
-
-@media (max-width:1440px) {
-    .slider-band-name-1 {
-        font-size: 7rem;
-        left: 4vh;
-    }
-    .slider-band-name-2 {
-        font-size: 7rem;
-        left: 25vh;
-    }
 }

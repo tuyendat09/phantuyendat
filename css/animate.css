@@ -79,6 +79,16 @@
       
   }
   
+  @keyframes slideRight {
+    0% {
+      left: -15%;
+      opacity: 0;
+    }
+    100% {
+      left: 0;
+    }
+  }
+
   @keyframes growUp {
       0% {
           top: 20%;

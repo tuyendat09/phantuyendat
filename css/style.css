@@ -298,11 +298,11 @@ a {
 
 .band-name {
     color: #fff000;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
     font-family: "Barlow Condensed";
     /* text-align: center; */
-    margin-bottom:10px;
+    margin-bottom:55px;
 }
 .band-member-img {
     height: 100%;
